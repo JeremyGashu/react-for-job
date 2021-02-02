@@ -1,0 +1,204 @@
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+
+.image-container img {
+    border-radius: 50%;
+    
+}
+.content{
+    color: rgb(107, 87, 87);
+    font-size: 13px;
+    font-weight: 500;
+}
+.time {
+    padding-right: 10px;
+    font-size:9px;
+    color: #444;
+}
+.name-and-content {
+    flex: 1;
+    padding-left: 30px;
+}
+.name {
+    font-weight: bolder;
+    margin-bottom: 8px;
+}
+.truncate{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+.message {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.124);
+    min-width: 400px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    border-radius: 3px;
+}
+.message:hover {
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.371);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 20px;
+}
+
+.messages-container {
+    flex:1;
+
+}
+.detail-container {
+    flex: 2;
+    position: relative;
+}
+
+.unselected-conversation-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unselected-conversation-display p {
+    padding-top: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444;
+}
+/* .detail-container {
+    position: relative;
+} */
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 10px;    
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.056);
+}
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.profile img {
+    width: 100%;
+    border-radius: 50%;
+}
+.name {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.details {
+    position: relative;
+}
+
+.details::after {
+    content: '';
+    position: absolute;
+    left: 46px;
+    bottom: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-color: rgb(0, 204, 0);
+}
+
+
+.messages {
+    position: relative;
+}
+
+
+
+.mine, .external{
+    margin-bottom: 45px;
+    margin-top:10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    
+}
+
+.mine p, .external p {
+    padding: 10px;
+}
+.mine .message-content{
+    background-color: rgb(204, 0, 255);
+    color: white;
+    border-radius: 20px;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.external .message-content{
+    border: 1px solid rgb(221, 221, 221);
+    margin-right: auto;
+    border-radius: 20px;
+    max-width: 400px;
+}
+
+.message-content {
+    position: relative;
+
+}
+
+.external .message-content::after{
+    content: attr(message-time);
+    position: absolute;
+    width: 200px;
+    left: 60%;
+    top: 100%;
+    color: #444;
+    padding: 10px;
+}
+
+.mine .message-content::after{
+    content: attr(message-time);
+    position: absolute;
+    right: 60%;
+    top: 100%;
+    color: #444;
+    padding: 10px;
+    
+}
+.send-message-area {
+    position: fixed;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    bottom: 0;
+    width: 100%;
+}
+
+.send-message-area input {
+    padding: 15px 20px;
+    padding-right: 130px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    outline: none;
+    color: #444;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+    
+}
+.send-button{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 100px;
+    bottom: 1000px;
+}
+

@@ -1,8 +1,12 @@
-function App() {
+import Home from "./components/Home"
+import MessagesProvider from "./providers/MessagesProvider";
+
+const App = () => {
   return (
-    <div className="App">
-      <p>Please let it work.</p>
-    </div>
+    <MessagesProvider>
+      <Home />
+    </MessagesProvider>
+    
   )
 }
 
