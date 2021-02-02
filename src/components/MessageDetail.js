@@ -21,7 +21,6 @@ const MessageDetail = ({ conversation }) => {
 				>
 					{mes.content}
 				</p>
-				{/* <p className='message-time'>{}</p> */}
 			</div>
 		);
 	});
